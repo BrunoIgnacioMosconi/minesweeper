@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 50px;
+  color: #FFFFFF;
+  background-color: #C0C0C0;
+}
+
+.title {
+  margin: 20px;
+}
+
+.flagsLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 20%;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.board {
+  display: inline-grid;
+  grid-template-columns: repeat(var(--size), 30px);
+  grid-template-rows: repeat(var(--size), 30px);
+  gap: 2px;
+  font-size: 30px;
+  background-color: #777;
+}
+
+.board > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  border: 2px solid #CCCCCC;
+  user-select: none;
+
+}
+
+.board > [data-status="hidden"] {
+  background: url("./assets/tapado.png") no-repeat center bottom/cover;
+  cursor: pointer;
+}
+
+.board > [data-status="mine"] {
+  background: url("./assets/mine.png") no-repeat center bottom/cover;
+}
+
+.board > [data-status="number"] {
+  background-color: none;
+}
+
+.board > [data-status="marked"] {
+  background: url("./assets/flag.png") no-repeat center bottom/cover;
+}

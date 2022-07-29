@@ -1,7 +1,7 @@
 import { CELL_STATUSES, createBoard, markCell, revealCell, checkWin, checkLose } from "./minesweeper.js"
 
 const BOARD_SIZE = 20;
-const NUMBER_OF_MINES = 50;
+const NUMBER_OF_MINES = 55;
 
 
 const board = createBoard(BOARD_SIZE, NUMBER_OF_MINES);
